@@ -1,10 +1,22 @@
 import random
-r = random.randint(1, 100)
+while True :
+	start = input('請決定隨機數字開始值: ')
+	start = int(start)
+	end = input('請決定隨機數字結束值: ')	
+	end = int(end)
+	if end <= start :
+		print('結束值不可<=開始值!! 請重新填寫。 ')
+	else :
+		break	
+
+
+
+r = random.randint(start, end)
 count = 0
 while True:
-	num = input('1~100猜數字: ')
-	count += 1
+	num = input('開始隨機猜數字: ')
 	num = int(num)
+	count += 1
 	if num == r :
 		print("bingo!")
 		print('你猜第',count,'次才成功')
